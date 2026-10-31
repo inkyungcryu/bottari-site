@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>개인정보 처리방침 · 보따리</title>
+<style>
+:root{color-scheme:light;--brown:#7A6648;--deep:#5E4E37;--ground:#F7F6F2;--ink:#292720;--muted:#68665f}
+*{box-sizing:border-box}body{margin:0;background:var(--ground);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Pretendard",sans-serif}main{max-width:800px;margin:0 auto;padding:32px 22px 80px}a{color:var(--brown)}nav{font-size:14px;margin-bottom:32px}h1,h2{color:var(--deep)}h1{font:500 36px/1.25 Georgia,serif}h2{font-size:21px;margin:32px 0 8px}p,li{margin:8px 0}.draft{background:#f4dfdc;color:#7c3025;border-radius:12px;padding:14px 16px}.muted{color:var(--muted)}section{background:white;border-radius:14px;padding:18px;margin:14px 0}
+</style></head>
+<body><main>
+<nav><a href="index.html">보따리 홈</a> · <a href="support.html">문의</a></nav>
+<h1>개인정보 처리방침</h1>
+<p class="draft"><strong>출시 전 검토 초안</strong><br>이 페이지는 App Store에 제출하거나 개인정보 처리방침 URL로 사용하기 전에 반드시 확인해야 해요. V1 계정 생성·삭제 기능, 로그인 제공자, 실제 공급자 설정을 반영한 뒤 이 표시를 제거하고 시행일을 입력하세요.</p>
+<p class="muted">초안 기준일: 2026년 10월 30일</p>
+<section><p>보따리(이하 “앱”)는 한국 여행 정보를 정리하는 앱이에요. 이 방침은 앱이 기기에 저장하는 정보와 사용자가 기능을 요청할 때 외부 서비스로 전송하는 정보를 설명해요.</p></section>
+<h2>기기에 저장하는 정보</h2>
+<p>여행 날짜와 동행 설정, 장소, 할 일, 노트와 사용자가 직접 입력한 내용은 현재 앱의 SQLite 저장소에 저장돼요. 공유 확장으로 받은 캡처는 추출 전 기기의 앱 공유 저장 공간에 임시로 저장될 수 있어요.</p>
+<h2>사진·글의 AI 추출</h2>
+<p>사용자가 읽어 오기를 선택하면 선택한 이미지, 공유된 텍스트나 URL, 사용자가 적은 메모가 추출을 위해 Supabase 서버를 거쳐 Anthropic API로 전송돼요. 보따리의 추출 함수는 이미지와 글 본문을 자체 데이터베이스에 기록하지 않도록 구현돼 있어요.</p>
+<p>Anthropic은 상용 API 입력과 출력을 기본적으로 처리 후 30일 이내 삭제한다고 안내하지만, 정책 집행·법적 의무 등 예외가 있을 수 있어요. 실제 보따리 프로젝트의 계약과 설정을 출시 전에 확인해야 해요. <a href="https://privacy.anthropic.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data">Anthropic API 보관 정책</a></p>
+<h2>서버 사용량 정보</h2>
+<p>AI 추출과 장소 검색의 일일 한도를 적용하기 위해 Supabase 익명 사용자 ID와 날짜별 요청 수, 이미지 수, AI 입력·출력 토큰 수를 저장해요. 현재 앱 데이터베이스에는 캡처 이미지나 추출 본문을 사용량 정보와 함께 저장하지 않아요. Supabase의 서비스 운영 로그는 프로젝트 설정과 요금제의 보관 정책을 따를 수 있어요.</p>
+<h2>장소 검색</h2>
+<p>사용자가 지점을 검색하면 검색어가 Supabase 서버를 거쳐 Kakao 장소 검색 API로 전달돼요. 현재 앱은 기기의 현재 위치를 수집하거나 전송하지 않아요. Kakao의 처리에는 <a href="https://privacy.kakao.com/policy?lang=ko">Kakao 개인정보 처리방침</a>과 API 약관이 적용될 수 있어요.</p>
+<h2>계정과 삭제</h2>
+<p>현재 앱은 서버 기능을 위해 익명 Supabase 세션을 자동 생성해요. V1에는 사용자가 계정을 만들고 앱 안에서 삭제하는 기능을 추가하기로 했어요. 출시 빌드에 따라 실제 계정 생성 방식, 계정과 연결되는 정보, 삭제하는 데이터와 삭제 경로를 여기에 구체적으로 적어야 해요. 계정 삭제는 Supabase 계정과 연결된 사용량 및 기기 내 여행 정보에 각각 반영되어야 해요.</p>
+<p class="draft">확인 전 항목: 로그인 제공자, 계정 전환 시 데이터 이관 방식, 계정 삭제 완료 범위와 시간, 공유 저장소 파일 삭제 동작.</p>
+<h2>보관 기간과 문의</h2>
+<p>여행 정보는 사용자가 앱에서 삭제하거나 앱 데이터를 제거할 때까지 기기에 보관돼요. 서버 사용량 데이터는 한도 적용과 비용 관리를 위해 보관되며, 계정 삭제 시 연관 데이터를 삭제하도록 V1에서 구현해야 해요. 공급자의 운영 로그에는 별도의 보관 기간이 적용될 수 있어요.</p>
+<p>개인정보 관련 문의는 <a href="support.html">도움말 및 문의 페이지</a>를 이용해 주세요. 이 문의 경로와 운영자의 개인정보 책임자 정보는 출시 전에 확정해 적어야 해요.</p>
+<h2>변경 사항</h2><p>처리 방식이 바뀌면 이 방침을 업데이트하고 시행일을 표시할게요.</p>
+</main></body></html>
