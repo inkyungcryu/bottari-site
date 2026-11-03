@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="보따리 앱의 개인정보 처리방침입니다.">
+    <title>개인정보 처리방침 · 보따리</title>
+    <style>
+      :root { color-scheme: light; --ink: #28251f; --muted: #706b62; --brown: #7a6648; --paper: #f7f6f2; --line: #e8e4dc; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+      main { width: min(760px, calc(100% - 40px)); margin: 0 auto; padding: 48px 0 56px; }
+      .mark { color: var(--brown); font-size: 13px; font-weight: 700; letter-spacing: .12em; }
+      nav { margin: 16px 0 32px; font-size: 14px; }
+      nav a, a { color: var(--brown); }
+      h1 { margin: 0; font-size: clamp(30px, 6vw, 40px); line-height: 1.25; letter-spacing: -.04em; }
+      .date { margin: 12px 0 28px; color: var(--muted); font-size: 14px; }
+      .lead { padding: 18px 20px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+      section { margin-top: 30px; }
+      h2 { margin: 0 0 8px; font-size: 20px; line-height: 1.4; }
+      p { margin: 8px 0; }
+      ul { margin: 8px 0; padding-left: 22px; }
+      li + li { margin-top: 5px; }
+      .note { color: var(--muted); font-size: 14px; }
+      .english { margin-top: 42px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+      footer { margin-top: 30px; color: var(--muted); font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="mark">BOTTARI</div>
+      <nav aria-label="페이지 이동"><a href="index.html">보따리 안내</a> · <a href="support.html">지원</a></nav>
+      <h1>개인정보 처리방침</h1>
+      <p class="date">시행일: 2026년 11월 3일</p>
+
+      <p class="lead">보따리는 한국 방문을 준비하는 데 필요한 여행 날짜, 장소, 할 일과 노트를 정리하는 앱입니다. 앱의 기본 기록은 기기에 저장하며 서버에 올려 보관하거나 동기화하지 않습니다. 사용자가 AI로 읽기를 요청할 때에는 아래에 설명한 자료가 처리를 위해 전송됩니다.</p>
+
+      <section>
+        <h2>계정과 익명 세션</h2>
+        <p>보따리에는 계정 생성, 로그인, 이메일 입력 기능이 없습니다. 서버 기능을 사용할 때 앱이 Supabase 익명 세션을 자동으로 만들고, Supabase 익명 사용자 ID를 사용합니다.</p>
+      </section>
+
+      <section>
+        <h2>기기에 저장되는 기록</h2>
+        <p>다음 정보는 기기 안에 저장되며, 서버에 저장하거나 서버로 동기화하지 않습니다.</p>
+        <ul>
+          <li>여행 날짜와 동행 정보</li>
+          <li>장소, 할 일, 노트</li>
+          <li>AI로 읽어 온 결과</li>
+        </ul>
+        <p>앱을 삭제하거나 설정에서 “이 기기의 모든 기록 지우기”를 누르면 기기에 저장된 기록이 삭제됩니다. 사용자가 AI로 읽기를 요청할 때 처리되는 자료와 서버 사용량 기록은 아래 항목을 참고해 주세요.</p>
+      </section>
+
+      <section>
+        <h2>AI로 읽기</h2>
+        <p>사용자가 앱에서 “읽어 오기”를 누른 경우에만 선택한 이미지나 텍스트, 링크가 Supabase 서버를 거쳐 Anthropic API로 전송됩니다. 서버는 이미지와 본문을 저장하지 않습니다. Anthropic의 데이터 처리와 보관은 <a href="https://www.anthropic.com/legal/privacy" rel="noreferrer">Anthropic 개인정보 처리방침</a>을 따릅니다.</p>
+      </section>
+
+      <section>
+        <h2>링크 읽기</h2>
+        <p>사용자가 링크를 붙여 넣어 읽기를 요청하면 보따리 서버가 해당 페이지를 가져와 내용을 Anthropic API로 보냅니다. 로그인이 필요한 페이지는 읽지 않습니다.</p>
+      </section>
+
+      <section>
+        <h2>장소 검색</h2>
+        <p>사용자가 장소를 검색하면 검색어가 Supabase 서버를 거쳐 Kakao 장소 검색 API로 전달됩니다. 앱은 기기 위치를 수집하거나 전송하지 않습니다.</p>
+      </section>
+
+      <section>
+        <h2>서버 사용량 기록</h2>
+        <p>서버 기능의 사용량 제한과 운영을 위해 Supabase 익명 사용자 ID, 날짜별 기능 요청 수, 이미지 수, AI 입력·출력 토큰 수를 기록합니다. 사용자별 사용량 기록은 90일이 지나면 자동으로 삭제됩니다.</p>
+        <p>이와 별도로 날짜별 기능 종류와 서비스 전체 요청 수 합계를 저장합니다. 이 집계에는 사용자 ID, 이미지 수, AI 토큰 수가 포함되지 않습니다. 현재 앱의 자동 삭제 작업은 사용자별 기록에 적용되며, 서비스 전체 집계에는 자동 삭제 기간이 설정되어 있지 않습니다.</p>
+      </section>
+
+      <section>
+        <h2>문의</h2>
+        <p>개인정보 처리에 관한 문의는 <a href="mailto:bottari.support@gmail.com">bottari.support@gmail.com</a>으로 보내 주세요.</p>
+      </section>
+
+      <p class="english" lang="en">English summary: Bottari stores trip dates, companions, places, tasks, notes, and AI reading results on the device. When you request AI reading, the selected image, text, or link is sent through Supabase to Anthropic; Bottari’s server does not store the image or page body. Link reading fetches the page on Bottari’s server and does not access pages that require login. Place search sends the query through Supabase to Kakao, and the app does not collect or send device location. Per-user usage records are automatically deleted after 90 days. Service-wide daily request totals are stored without a user ID and do not have an automatic deletion period configured. Contact <a href="mailto:bottari.support@gmail.com">bottari.support@gmail.com</a>.</p>
+
+      <footer><a href="index.html">보따리 안내</a> · <a href="support.html">지원</a></footer>
+    </main>
+  </body>
+</html>
